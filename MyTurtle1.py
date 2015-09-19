@@ -2,14 +2,11 @@ import turtle
 
 window = turtle.Screen()
 
-george = turtle.Turtle()
-george.shape('turtle')
-george.color('green', 'yellow')
+t = turtle.Turtle()
+t.shape('turtle')
+t.color('green', 'yellow')
 
-george.down()
-george.begin_fill()
-george.forward(100)
-
-george.end_fill()
+t.down()
+t.forward(100)
 
 window.mainloop()
