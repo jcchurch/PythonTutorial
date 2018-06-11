@@ -13,7 +13,7 @@ def move(t, x, y):
     t.up()
     t.goto(x, y)
 
-def windForward(t):
+def moveForward(t):
     t.down()
     t.left(90)
     t.forward(random.randrange(100))
@@ -35,9 +35,9 @@ move(m, -300, 100)
 move(d, -300, 300)
 
 for i in range(4):
-    windForward(r)
-    windForward(l)
-    windForward(m)
-    windForward(d)
+    moveForward(r)
+    moveForward(l)
+    moveForward(m)
+    moveForward(d)
 
 window.mainloop()
