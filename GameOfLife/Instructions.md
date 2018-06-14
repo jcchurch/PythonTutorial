@@ -245,6 +245,8 @@ We are inside the "for j in range(N):" and under the "total =" line.
     elif grid[i,j] == OFF and total == 3:
         newGrid[i,j] = ON
 
+All four of John Conway's original rules are in this `if` statement.
+
 ## Update method continued.
 
 This is after all of the "for" loops, but still inside the "update" function.
@@ -276,3 +278,59 @@ We are still inside the `main()` function.
 After all of the functions, add a call to `main()`:
 
     main()
+
+Run the simulation!
+
+## Let's explore.
+
+Find this line in your program. This makes your random grid.
+
+    grid = np.random.choice([ON, OFF], (N, N))
+
+We can change it to this to make fewer ON cells than OFF.
+
+    grid = np.random.choice([ON, OFF], (N, N), p=[0.2, 0.8])
+
+You can use this to see that some clumps stay the same forever. Other clumps alternate back and forth between two shapes. Each of these clumps of cells have a name in the Game of Life history.
+
+## Let's explore.
+
+Remove the "grid =" line and replace it with this:
+
+    grid = np.zeros((N, N))
+    grid[1,2] = ON
+    grid[2,3] = ON
+    grid[3,1] = ON
+    grid[3,2] = ON
+    grid[3,3] = ON
+
+In this grid, every cell is OFF except for these five.
+
+Without us telling you, try to draw this shape on paper. It's an important shape in the Game of Life called a "Glider". If you run your program, you should see the glider gliding down the screen from the top-left corner to the bottom right.
+
+## Review
+
+In this lesson, we've learned...
+
+- How to create and modify 2D lists.
+- How to create John Conway's Game of Life.
+
+## Philosophy
+
+Conway's Game of Life has been written about in philosophy.
+
+- Are the cells in this simulation alive?
+    - Most people would say that they aren't alive, yet they behave like living creatures.
+- Is it possible to create a universe of cells with fewer rules than Conway's Game?
+
+## Philosophy
+
+Our universe is vastly more complex than this game, yet this game continues to be studied for its complexity.
+
+Using the same program that we've written today, scientists have built entire programming environments. They have created artificial clumps of cells which follow Conway's rules and solve complex problems. Computer scientists have further proven that the clumps of cells can solve any problem that can be solved with a language such as Python.
+
+Further more, scientists have created clumps of cells within the Game of Life that have produced a fully functioning Game of Life on their own. This game, despite how short it is, is wonderfully complicated.
+
+## Play it again.
+
+Play the initial version again and ask yourself, "Are these cells alive?"
