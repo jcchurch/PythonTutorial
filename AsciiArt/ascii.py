@@ -56,7 +56,7 @@ def main():
     outFile = input("Enter the output file to write: ")
 
     scale = 0.43
-    cols = 50
+    cols = 80
 
     print('generating ASCII art...')
     asciiImg = convertImageToAscii(imgFile, cols, scale)

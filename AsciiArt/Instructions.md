@@ -29,11 +29,20 @@ Every since the typewriter was created, people have enjoyed creating art out of 
 ## In this session
 
 - We are going to explore the Pillow library.
-- The Pillow library is used to open images.
+- The Pillow library is used to open image files, such as PNG, JPG, and BMP files.
     - If you are wondering how it got the name "Pillow",
       it is because the older version was called "PIL"
       (for "Python Image Library").
 - The library in Python is still named "PIL".
+
+## Preparing for Conway
+
+You will need to install some special software for today's lesson.
+
+1. Find the search bar on your computer.
+2. Type "cmd".
+3. At the command prompt, run "py -m pip install pillow".
+4. If you get any error messages, please raise your hand for us to help.
 
 ## In this session
 
@@ -161,7 +170,10 @@ Again, still inside of "convertImageToAscii" and inside of our "for i in range(c
 
     img = image.crop((x1, y1, x2, y2))
     avg = int(computeAverage(img))
-    asciiImg[j] += gscale[int((avg*len(gscale))/255)]
+
+    maxGradient = len(gscale) - 1
+    character =  gscale[int((avg*maxGradient)/255)]
+    asciiImg[j] += character
 
 ## Converting code.
 
@@ -182,7 +194,7 @@ We begin by asking for an image filename and an output file name.
 Still inside the main function. Here, we call "convertImageToAscii" with our requested image.
 
         scale = 0.43
-        cols = 50
+        cols = 80
 
         print('generating ASCII art...')
         asciiImg = convertImageToAscii(imgFile, cols, scale)
@@ -205,3 +217,4 @@ After main. You need this to call the main function.
     main()
 
 Try it out! Look for images on Google Image Search and run them through the ASCII art generator.
+
