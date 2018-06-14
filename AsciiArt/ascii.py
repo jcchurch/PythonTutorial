@@ -42,10 +42,10 @@ def covertImageToAscii(fileName, cols, scale):
             x2 = (i + 1) * w
             if i == cols-1:
                 x2 = W
+
             img = image.crop((x1, y1, x2, y2))
             avg = int(computeAverage(img))
-
-            asciiImg[j] += gscale[int((avg*9)/255)]
+            asciiImg[j] += gscale[int((avg*len(gscale))/255)]
     
     return asciiImg
 
