@@ -1,4 +1,4 @@
-# Python Turtles from uCode@UWG
+# Python Turtles and other Tutorials.
 
 Thank you for participating in "Turtles, Color, and Shapes" uCode event.
 
