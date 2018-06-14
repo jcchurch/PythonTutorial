@@ -2,6 +2,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 
+## This code was adapted from the book Python Playground.
+## by Mahesh Venkitachalam
+## nostarch.com
+
+## The code has been drasticly shortened for a summer camp.
+
 ON = 255
 OFF = 0
 
