@@ -14,7 +14,7 @@ def computeAverage(image):
     w,h = im.shape
     return np.average(im.reshape(w*h))
 
-def covertImageToAscii(fileName, cols, scale):
+def convertImageToAscii(fileName, cols, scale):
     image = Image.open(fileName).convert('L')
     W, H = image.size
     print("input image dims: %d x %d" % (W, H))
@@ -57,7 +57,7 @@ def main():
     cols = 50
 
     print('generating ASCII art...')
-    asciiImg = covertImageToAscii(imgFile, cols, scale)
+    asciiImg = convertImageToAscii(imgFile, cols, scale)
 
     f = open(outFile, 'w')
     for row in asciiImg:
