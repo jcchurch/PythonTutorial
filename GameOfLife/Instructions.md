@@ -62,7 +62,7 @@ The number 5 appears in the second row and the first column, so we say that its 
 
 - What is the location of 3?
 - What is the location of 0?
-- What is the location of 4?
+- What is the location of 9?
 - What is the location of 6?
 
 ## 2D Lists
@@ -188,7 +188,7 @@ In order to count the neighbors of an element, we count how many of the 8 cells 
 
 ## What about the edge of the map?
 
-- In old Atari games (ask your parents), if something passed over the edge of the screen, it usually repeared on the other side of the screen.
+- In old Atari games (ask your parents), if something passed over the edge of the screen, it usually reappeared on the other side of the screen.
 - We can do this with the remainder operator. Let's say that we have a 100 by 100 board. N=100
     - For example, if i=99 and j=99, then (i+1, j+1) becomes (100, 100). This is an illegal index.
     - But instead if we say ( (i+1)%N, (j+1)%N ), we then get (0,0). This is a legal index and on the opposite corner of the map.
