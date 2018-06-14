@@ -45,8 +45,10 @@ def convertImageToAscii(fileName, cols, scale):
 
             img = image.crop((x1, y1, x2, y2))
             avg = int(computeAverage(img))
-            asciiImg[j] += gscale[int((avg*len(gscale))/255)]
-    
+            maxGradient = len(gscale) - 1
+            character =  gscale[int((avg*maxGradient)/255)]
+            asciiImg[j] += character
+
     return asciiImg
 
 def main():

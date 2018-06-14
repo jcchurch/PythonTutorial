@@ -2,7 +2,7 @@
 
 ## ASCII Art
 
-ASCII (pronounced "askey") art is popular on message boards because of the ease of which it can be copy and pasted.
+ASCII (pronounced "askey") art is art made with characters that you type on a keyboard. It is popular on message boards because of the ease of which it can be copy and pasted.
 
              _
             /\\
@@ -80,7 +80,7 @@ We are going to auto-generate ASCII art. Here's the theory.
 
 (But several do!)
 
-## How do we delect a character?
+## How do we select a character?
 
     $@B&MokbdqwmO0QCJUXzcunxjft\|(1{}?+>lI:\"^`'.
 
